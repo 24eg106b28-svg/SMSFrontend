@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My records – Student Management System</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">Student Management System</div>
+      <div class="topbar-user">
+        <span>Signed in as <strong id="userName"></strong></span>
+        <button class="btn btn-ghost btn-sm" id="logoutBtn" type="button">Sign out</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="loadError" class="form-error hidden"></div>
+
+    <section class="panel" style="margin-bottom:20px">
+      <div class="panel-body">
+        <div class="profile-head">
+          <div class="avatar" id="avatar">S</div>
+          <div>
+            <h1 id="pName" style="font-size:24px">Loading…</h1>
+            <div style="color:var(--muted)" id="pSub"></div>
+          </div>
+        </div>
+        <dl class="profile-grid">
+          <div><dt>Roll number</dt><dd id="pRoll">—</dd></div>
+          <div><dt>Department</dt><dd id="pDept">—</dd></div>
+          <div><dt>Course</dt><dd id="pCourse">—</dd></div>
+          <div><dt>Year of study</dt><dd id="pYear">—</dd></div>
+          <div><dt>Email</dt><dd id="pEmail">—</dd></div>
+          <div><dt>Phone</dt><dd id="pPhone">—</dd></div>
+          <div><dt>Date of birth</dt><dd id="pDob">—</dd></div>
+          <div style="grid-column: span 2"><dt>Address</dt><dd id="pAddress">—</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <div class="two-col">
+      <section class="panel">
+        <div class="panel-head"><h2>Attendance overview</h2></div>
+        <div class="panel-body">
+          <div class="summary-line">
+            <strong id="attPercent">0%</strong>
+            <div class="progress" id="attBar"><div style="width:0%"></div></div>
+          </div>
+          <p id="attCount" style="color:var(--muted);margin:0 0 16px"></p>
+          <div id="subjectBreakdown"></div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><h2>Marks overview</h2></div>
+        <div class="panel-body">
+          <div class="summary-line">
+            <strong id="markPercent">0%</strong>
+            <div class="progress" id="markBar"><div style="width:0%"></div></div>
+          </div>
+          <p id="markCount" style="color:var(--muted);margin:0"></p>
+        </div>
+      </section>
+    </div>
+
+    <section class="panel" style="margin-bottom:20px">
+      <div class="panel-head"><h2>Marks</h2></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Subject</th><th>Exam</th><th>Marks</th><th>Percent</th><th>Grade</th></tr></thead>
+          <tbody id="markRows"><tr><td colspan="5" class="empty">Loading…</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head"><h2>Attendance log</h2></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Date</th><th>Subject</th><th>Status</th></tr></thead>
+          <tbody id="attRows"><tr><td colspan="3" class="empty">Loading…</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/student.js"></script>
+</body>
+</html>

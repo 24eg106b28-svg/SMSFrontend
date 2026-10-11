@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign in – Student Management System</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="login-wrap">
+    <section class="login-hero">
+      <h1>Every student record, in one place.</h1>
+      <p>Admissions details, daily attendance and exam marks are stored centrally, so staff spend less time on paperwork and students can check their own progress.</p>
+      <div class="ledger" aria-hidden="true">
+        <div><span>Student profiles</span><span>Add, edit, search</span></div>
+        <div><span>Attendance</span><span>Recorded per subject</span></div>
+        <div><span>Marks &amp; grades</span><span>Visible to each student</span></div>
+      </div>
+    </section>
+
+    <section class="login-panel">
+      <div class="login-card">
+        <h2>Sign in</h2>
+        <p class="muted">Choose how you are signing in.</p>
+
+        <div class="role-tabs" role="tablist">
+          <button type="button" class="role-tab active" data-role="ADMIN">Administrator</button>
+          <button type="button" class="role-tab" data-role="STUDENT">Student</button>
+        </div>
+
+        <form id="loginForm" novalidate>
+          <div id="loginError" class="form-error hidden"></div>
+          <div class="field">
+            <label for="username" id="usernameLabel">Username</label>
+            <input id="username" name="username" type="text" autocomplete="username" required>
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" autocomplete="current-password" required>
+          </div>
+          <button class="btn btn-block" id="loginBtn" type="submit">Sign in</button>
+        </form>
+
+        <div class="demo-hint" id="demoHint"></div>
+      </div>
+    </section>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>
